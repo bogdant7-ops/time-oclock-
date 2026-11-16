@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #0a0a0a;
+    color: #ededed;
+    font-family: 'JetBrains Mono', monospace;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: background-color 0.5s ease;
+}
+
+body.break-mode {
+    background-color: #07110c;
+}
+
+.app-container {
+    width: 100%;
+    max-width: 420px;
+    padding: 2rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    max-height: 640px;
+    border: 1px solid #1f1f1f;
+    border-radius: 16px;
+    background: #0f0f0f;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+    color: #888;
+}
+
+.logo {
+    letter-spacing: -0.5px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.stats-pill {
+    background: #171717;
+    padding: 4px 10px;
+    border-radius: 20px;
+    border: 1px solid #262626;
+    font-size: 0.75rem;
+}
+
+.main-workspace {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.timer-display {
+    font-size: 4.2rem;
+    font-weight: 300;
+    letter-spacing: -2px;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+}
+
+.task-target {
+    font-size: 0.85rem;
+    color: #737373;
+    margin-bottom: 1.5rem;
+    min-height: 1.2rem;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Блок выбора времени */
+.time-presets {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    justify-content: center;
+}
+
+.preset-btn {
+    background: #141414;
+    color: #888;
+    border: 1px solid #262626;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    flex: 1;
+}
+
+.preset-btn:hover {
+    background: #1c1c1c;
+    color: #fff;
+}
+
+.preset-btn.active {
+    background: #fff;
+    color: #000;
+    border-color: #fff;
+    font-weight: 500;
+}
+
+body.break-mode .preset-btn.active {
+    background: #10b981;
+    color: #fff;
+    border-color: #10b981;
+}
+
+.custom-time-wrap {
+    flex: 1;
+}
+
+.custom-time-wrap input {
+    width: 100%;
+    background: #141414;
+    border: 1px solid #262626;
+    padding: 6px 4px;
+    border-radius: 6px;
+    color: #fff;
+    font-family: inherit;
+    font-size: 0.75rem;
+    text-align: center;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.custom-time-wrap input:focus {
+    border-color: #525252;
+}
+
+/* Убираем стрелочки у инпута чисел для чистоты */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.control-actions {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+button {
+    padding: 12px;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-primary {
+    background: #fff;
+    color: #000;
+    border: none;
+    font-weight: 500;
+    flex: 2;
+}
+
+.btn-primary:hover {
+    background: #d4d4d4;
+}
+
+body.break-mode .btn-primary {
+    background: #10b981;
+    color: #fff;
+}
+
+body.break-mode .btn-primary:hover {
+    background: #059669;
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #a3a3a3;
+    border: 1px solid #262626;
+    flex: 1;
+}
+
+.btn-secondary:hover {
+    background: #171717;
+    color: #fff;
+}
+
+.app-footer input {
+    width: 100%;
+    background: #141414;
+    border: 1px solid #262626;
+    padding: 12px 16px;
+    border-radius: 8px;
+    color: #fff;
+    font-family: inherit;
+    font-size: 0.85rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.app-footer input:focus {
+    border-color: #525252;
+}

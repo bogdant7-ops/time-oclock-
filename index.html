@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus & Flow</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <span class="logo" id="mode-indicator">✦ focus</span>
+            <div class="stats-pill">
+                <span id="streak-count">0 days streak</span>
+            </div>
+        </header>
+
+        <main class="main-workspace">
+            <div class="timer-display" id="timer">25:00</div>
+            <div class="task-target" id="current-task">Введи задачу внизу и начни сессию</div>
+
+            <!-- Настройка времени от 1 до 100 минут -->
+            <div class="time-presets" id="presets-container">
+                <button class="preset-btn" data-time="15">15m</button>
+                <button class="preset-btn active" data-time="25">25m</button>
+                <button class="preset-btn" data-time="45">45m</button>
+                <button class="preset-btn" data-time="60">60m</button>
+                <div class="custom-time-wrap">
+                    <input type="number" id="custom-minutes" min="1" max="100" placeholder="мін">
+                </div>
+            </div>
+
+            <div class="control-actions">
+                <button class="btn-primary" id="start-btn">Старт</button>
+                <button class="btn-secondary" id="reset-btn">Сбросить</button>
+            </div>
+        </main>
+
+        <footer class="app-footer">
+            <input type="text" id="task-input" placeholder="На чем фокус сегодня?..." autocomplete="off">
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
